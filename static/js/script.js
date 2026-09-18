@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const actions = modal.querySelector('.modal-actions');
     actions.innerHTML = '';
     if (data.dataset.github) actions.innerHTML += `<a class="button button-primary" href="${data.dataset.github}" target="_blank" rel="noreferrer">GitHub <i class="fa-brands fa-github"></i></a>`;
-    if (data.dataset.demo) actions.innerHTML += `<a class="button button-ghost" href="${data.dataset.demo}" target="_blank" rel="noreferrer">Live demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>`;
+    if (data.dataset.demo) actions.innerHTML += `<a class="button button-ghost" href="${data.dataset.demo}" target="_blank" rel="noreferrer">Go to live project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>`;
     modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden';
   }));
   document.querySelector('.modal-close')?.addEventListener('click', closeModal);
