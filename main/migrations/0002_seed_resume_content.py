@@ -50,7 +50,12 @@ def seed_content(apps, schema_editor):
     for index, item in enumerate(education):
         Education.objects.get_or_create(degree=item[0], defaults={"institution": item[1], "year": item[2], "result": item[3], "display_order": index})
 
-    socials = [("GitHub", "https://github.com/ArshitGondaliya", "fa-brands fa-github"), ("LinkedIn", "https://linkedin.com/in/arshit-gondaliya", "fa-brands fa-linkedin-in"), ("Email", "mailto:arshitgondaliya09@gmail.com", "fa-solid fa-envelope")]
+    socials = [
+        ("GitHub", "https://github.com/ArshitGondaliya", "fa-brands fa-github"),
+        ("LinkedIn", "https://linkedin.com/in/arshit-gondaliya", "fa-brands fa-linkedin-in"),
+        ("Instagram", "https://www.instagram.com/arsh.it.gondaliya?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==", "fa-brands fa-instagram"),
+        ("Email", "mailto:arshitgondaliya09@gmail.com", "fa-solid fa-envelope"),
+    ]
     for index, (label, url, icon) in enumerate(socials):
         SocialLink.objects.get_or_create(label=label, defaults={"url": url, "icon": icon, "display_order": index})
 
